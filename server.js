@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname)))
 
 app.get('/',(req, res) => {res.sendFile(path.join(__dirname, '/main/index.html'))});
 
-exec(`start chrome http://127.0.0.1:${port}`);
+// exec(`start chrome http://127.0.0.1:${port}`);
 //
 
 
@@ -47,6 +47,7 @@ const {loginsubmit} = require('./functions/login.js')
 const {addnewadmin, addnewbooking, addnewcar} = require('./functions/add.js')
 const {deleteadmin, deletecar} = require('./functions/delete.js')
 const {download_admins, download_bookings, download_cars} = require('./functions/download.js')
+const changestate = require('./functions/update.js')
 //
 
 // Routing
@@ -66,4 +67,6 @@ router.route('/deleteCar').get(deletecar);
 router.route('/back/admins/admins.html').get(download_admins);
 router.route('/back/bookings/bookings.html').get(download_bookings);
 router.route('/back/cars/cars.html').get(download_cars);
+
+router.route('/back/bookings/bookings.html/changestate*').get(changestate);
 //

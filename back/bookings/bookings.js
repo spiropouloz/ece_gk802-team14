@@ -18,7 +18,8 @@ function get_car(cars, id_car){
         if(car["id"] === id_car){
             return [car["brand"],car["license_plate"]];
         }
-    };    
+    };   
+    return '0'; 
 }
 
 
@@ -73,3 +74,14 @@ button.addEventListener("click", (event)=>{
     document.querySelector("#new").style.visibility="visible";
 })
 
+
+document.addEventListener("dblclick",(event)=>{
+    const id = event.target.childNodes[0].parentNode.offsetParent.cells[0].innerHTML
+    const lp = event.target.childNodes[0].parentNode.offsetParent.cells[2].innerHTML
+    console.log(lp)
+    if (event.target.className === "ongoing"){
+        event.target.className = "cancelled"
+        event.target.innerHTML = "Ακυρωμένη"
+        window.location.href +=`/changestate?id=${id}&lp=${lp}`
+    }
+})
