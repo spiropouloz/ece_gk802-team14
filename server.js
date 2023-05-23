@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname)))
 
 app.get('/',(req, res) => {res.sendFile(path.join(__dirname, '/main/index.html'))});
 
-// exec(`start chrome http://127.0.0.1:${port}`);
+exec(`start chrome http://127.0.0.1:${port}`);
 //
 
 
@@ -29,8 +29,8 @@ app.engine('hbs',exphbs.engine({extname: '.hbs', defaultLayout: 'main', layoutsD
 // Σύνδεση με MongoDB Atlas
 // const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb+srv://marios:test@cluster0.1ooobbs.mongodb.net/Avis?retryWrites=true&w=majority', {
+MONGODB_URL = ''
+mongoose.connect(MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
