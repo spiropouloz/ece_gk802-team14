@@ -78,10 +78,11 @@ button.addEventListener("click", (event)=>{
 document.addEventListener("dblclick",(event)=>{
     const id = event.target.childNodes[0].parentNode.offsetParent.cells[0].innerHTML
     const lp = event.target.childNodes[0].parentNode.offsetParent.cells[2].innerHTML
-    console.log(lp)
-    if (event.target.className === "ongoing"){
-        event.target.className = "cancelled"
-        event.target.innerHTML = "Ακυρωμένη"
+    let state = event.target.childNodes[0].parentNode.offsetParent.cells[9]
+    // console.log(lp, id , state)
+    if (state.className === "ongoing"){
+        state.className = "cancelled"
+        state.innerHTML = "Ακυρωμένη"
         window.location.href +=`/changestate?id=${id}&lp=${lp}`
     }
 })
