@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Back Office</title>
+    <link rel="stylesheet" href="../back.css">
+    <link rel="stylesheet" href="bookings.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script src="bookings.js" async></script>
+    <h1 class="banner">Back Office <button style="position: absolute; right:20px;" onclick="logout()">Logout</button></h1>
+
+    <span class="back-office">
+
+        <div class="back-options">
+            <ul style="list-style:none">
+                <li class="home"><a href="/back/home/home.html">Αρχική Σελίδα</a></li>
+                <li class="bookings here"><a href="/back/bookings/bookings.html">Κρατήσεις</a></li>
+                <li class="cars"><a href="/back/cars/cars.html">Αυτοκίνητα</a></li>
+                <li class="admins"><a href="/back/admins/admins.html">Διαχειριστές</a></li>
+                <li class="logo" style="margin: 0;"><a href="http://127.0.0.1:3000">
+                    <img src="/images/avis-white-logo.png">
+                  </a></li>
+            </ul>
+        </div>
+
+        <div class="book-table">
+            <div class="options">
+                <h3>Εμφάνιση Κρατήσεων
+                    <select id="status" style="width:fit-content;">
+                        <option value="all" selected>Όλες</option>
+                        <option value="ongoing">Ενεργές</option>
+                        <option value="finished">Ολοκληρωμένες</option>
+                        <option value="cancelled">Ακυρωμένες</option>
+                        
+                    </select>
+                </h3>
+            
+                <button id="newbutton" > Νέα Κράτηση</button>
+            </div>
+
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Μάρκα Αυτοκινήτου</th>
+                        <th>Αριθμός Πινακίδας</th>
+                        <th>Ημ/νία Έναρξης</th>
+                        <th>Ημ/νία Λήξης</th>
+                        <th>Ονοματεπώνυμο Οδηγού</th>
+                        <th>Αριθμός Διπλώματος Οδηγού</th>
+                        <th>Ασφάλιση</th>
+                        <th>Τιμή €</th>
+                        <th>Κατάσταση</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody">
+
+                </tbody>
+              </table>
+
+
+              <div class="center" id="new">
+                <h1>Προσθήκη Νέας Κράτησης</h1>
+                <form class="container" action="/addBooking" method="GET">
+        
+                  <div class="inputbox">
+                    <input type="text" name="license_plate" required>   
+                    <span>Αριθμός Πινακίδας</span>
+                  </div>
+                  <label for="date">Ημ/νία Λήξης</label>
+
+                  <div class="inputbox">
+                    <input type="date" name="finish_date" id="date" required>
+                  </div>
+        
+                  <div class="inputbox">
+                    <input type="text" name="name" required>
+                    <span>Ονοματεπώνυμο Οδηγού</span>
+                  </div>
+        
+                  <div class="inputbox">
+                    <input type="number" name="drivers_license" required>
+                    <span>Αριθμός Διπλώματος Οδηγού</span>
+                  </div>
+
+
+                  <span>Ασφάλιση</span>
+                  <div class="inputbox">
+                    <select name="insurance" style="background-color: grey; display: block;">
+                      <option value="full" selected="selected">Πλήρης + 100€</option>
+                      <option value="partial">Μερική + 50€</option>
+                      <option value="none">Καμία</option>
+                    </select>
+                  </div>
+        
+                <input type="submit" value="Υποβολή" class="submit">
+                  
+        
+                </form>
+              </div>
+              
+
+        </div>
+    </span>
+
+</body>
+
+<script async>
+    function logout(){window.location.href = '/login';}
+</script>
+
+
+</html>

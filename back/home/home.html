@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Back Office</title>
+    <link rel="stylesheet" href="../back.css">
+    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script src="home.js" async></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+    <h1 class="banner">Back Office <button style="position: absolute; right:20px;" onclick="logout()">Logout</button></h1>
+    
+
+    <span class="back-office">
+
+        <div class="back-options">
+            <ul style="list-style:none">
+                <li class="home here"><a href="#">Αρχική Σελίδα</a></li>
+                <li class="bookings"><a href="/back/bookings/bookings.html">Κρατήσεις</a></li>
+                <li class="cars"><a href="/back/cars/cars.html">Αυτοκίνητα</a></li>
+                <li class="admins"><a href="/back/admins/admins.html">Διαχειριστές</a></li>
+                <li class="logo" style="margin: 0;"><a href="http://127.0.0.1:3000">
+                    <img src="/images/avis-white-logo.png">
+                  </a></li>
+            </ul>
+        </div>
+
+        <div class="services">
+            <ul>
+                <li>
+                    <h2>Συνολικά Έσοδα</h2>
+                    <h1 id="earnings"></h1>
+                    </label>
+                </li>
+                <li>
+                    <h2>Ενεργές Κρατήσεις</h2>
+                    <h1 id="active-bookings"></h1>
+                </li>
+                <li>
+                    <h2>Συνολικές Κρατήσεις</h2>
+                    <h1 id="total-bookings">5</h1>
+                    </label>
+                </li>
+               
+            </ul>
+
+        </div>
+    </span>
+
+</body>
+
+<script async>
+    function logout(){window.location.href = '/login';}
+</script>
+
+</html>

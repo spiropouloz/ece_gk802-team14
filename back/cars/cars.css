@@ -1,0 +1,23 @@
+table {
+    margin: 20px;
+}
+
+.free{
+    color:green;
+}
+
+.rented{
+    color:red;
+}
+
+
+.options{
+    justify-content: space-around;
+}
+
+th,
+td:not(:last-child){
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}

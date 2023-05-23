@@ -1,0 +1,100 @@
+<script src='/results/views/results.js' async> </script>
+
+<h1 style="text-align:center; display:{{display}}"><a href="/main/index.html" style="text-decoration:none; color:green;">H καταχώρηση ολοκληρώθηκε με επιτυχία</a></h1>
+<h1 style="text-align:center; display:{{display}}"><a href="/main/index.html">Πατήστε για έξοδο</a></h1>
+
+<div class="banner"><a href="/main/index.html"><img src="/images/avis-white-logo.png" style="margin-left: 20px;"></a>
+</div>
+
+<ul class="info">
+    <li> Επιλέξτε το όχημά σας </li>
+</ul>
+
+<div class="free-cars">
+    <form id='selectcar' action="/selectcar" method="GET">
+
+        <div class="insurance" style="margin-bottom: 50px;">
+            <h3>Διαλέξτε ασφάλιση
+                <select name="insurance">
+                    <option value="full" selected="selected"> Πλήρης + 100€</option>
+                    <option value="partial"> Μερική + 50€</option>
+                    <option value="none"> Καμία </option>
+
+                </select>
+            </h3>
+        </div>
+
+        <table id="table">
+
+            <thead>
+                <tr>
+                    <th>Μάρκα</th>
+                    <th>Μοντέλο </th>
+                    <th>Καύσιμο </th>
+                    <th>Τιμή € / ημέρα</th>
+                    <th>Συνολική Τιμή €</th>
+                    <th>Επιλογή</th>
+                </tr>
+            </thead>
+
+
+
+            <tbody id="tablebody">
+
+                {{#each car}}
+                <tr>
+                    <td>{{brand}}</td>
+                    <td>{{model}}</td>
+                    <td>{{fuel}}</td>
+                    <td>{{price_day}}</td>
+                    <td>{{price_total}}</td>
+                    <td><input type="checkbox" name='{{_id}}' onclick="handlecheck(this)"></td>
+                </tr>
+
+                {{/each}}
+            </tbody>
+
+        </table>
+    </form>
+</div>
+
+<ul class="info" style="margin-top: 50px;">
+    <li> Συμπληρώσετε τα στοιχεία σας </li>
+</ul>
+
+{{!-- <div class="drivers">
+    <label for="fname">Όνομα</label>
+    <input type="text" id="fname" name="fname">
+    <br><br>
+    <label for="lname"> Επώνυμο </label>
+    <input type="text" id="lname" name="lname">
+    <br><br>
+    <label for="drivers_license">Εκπτωτικός Κωδικός </label>
+    <input type="text" id="drivers_license" name="drivers_license">
+    <br><br>
+</div> --}}
+
+<div class="box">
+    <div class="center" id="new">
+        <h1>Στοιχεία Οδηγού &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+
+            <div class="inputbox">
+                <input type="text" form="selectcar" name="fname" required="required">
+                <span>Όνομα</span>
+            </div>
+
+            <div class="inputbox">
+                <input type="text" form="selectcar" name="lname" required="required">
+                <span>Επώνυμο</span>
+            </div>
+
+            <div class="inputbox">
+                <input type="text" form="selectcar" name="drivers_license" required="required">
+                <span>Αριθμός Διπλώματος Οδηγού</span>
+            </div>
+    </div>
+</div>
+
+<div class="butt"><input type="submit" form="selectcar" style="margin: 50px; auto;"></div>
+
+

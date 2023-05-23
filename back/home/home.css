@@ -1,0 +1,33 @@
+.services {
+    margin: 27px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.services ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.services li {
+    height: 200px; width: 300px;
+    background-color: rgb(218, 218, 218);
+    display: flex;
+    border-radius: 30px;
+    margin: 30px 25px;
+    transform: scale(1.15);
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    color: black;
+    font-size: 0.9em;
+    text-align: center;
+    max-width: 600px;
+}
+
+
+
+

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/main/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Renting</title>
+</head>
+
+<body>
+  <script src='/main/functions.js' async> </script>
+
+  <div class="header">
+    <ul class="language">
+      <li><a href="#">Ελληνικά</a></li>
+      <li><a href="#">Αγγλικά</a></li>
+    </ul>
+    <ul class="support">
+      <li><img src="/images/livechat.png"><a href="#"> Live Chat</a></li>
+      <li><a href="#">Βοήθεια</a></li>
+      <li><a href="#">Επικοινωνία</a></li>
+      <li><a href="/login">Σύνδεση</a></li>
+    </ul>
+
+  </div>
+
+  <nav class="banner">
+    <ul>
+      <li class="logo"><a href="http://127.0.0.1:3000">
+          <img src="/images/avis-white-logo.png">
+        </a></li>
+      <li><a href="#">Ενοικίαση</a></li>
+      <li><a href="#">Leasing</a></li>
+      <li><a href="#">Νέα</a></li>
+      <li><a href="#">Προφίλ</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="backimage">
+      <div class="offer">
+        <h1>Χειμερινές αποδράσεις με <br>μοναδικές προσφορές</h1>
+        <a class="boxoffer" href="#"> ΝΕΑ ΠΡΟΣΦΟΡΑ: 20% έκπτωση στην ενοικίαση αυτοκινήτου</a>
+        <a class="boxoffer" href="#"> 20% φοιτητική έκπτωση</a>
+        <a class="boxoffer" href="#"> Δωρεάν αλυσίδες τον χειμώνα </a>
+
+
+      </div>
+      <div class="box">
+        <form class="container" action="/search" method="GET">
+
+          <fieldset class="form-grid">
+            <legend class="form-double-colspan">ΠΑΡΑΛΑΒΗ - ΠΑΡΑΔΟΣΗ</legend>
+            <i class="form-double-colspan">Συμπληρώστε τα στοιχεία με
+              ελληνικούς χαρακτήρες</i>
+
+            <label for="pickup-location">Σταθμός Παραλαβής: </label>
+            <input type="text" id="pickup-location" name="pickup_location" placeholder="Όνομα, ΤΚ, Πόλη ..."  >
+
+            <label for="return-location-button" class="return-location-button">Επιλέξτε διαφορετικό σταθμό επιστροφής  &nbsp; &nbsp;       
+              <input type="checkbox" id ="return-location" name="return_location_checkbox" onclick="toggle('return-location')">
+            </label>
+
+            <label for="return-location" class="return-location">Σταθμός Παράδοσης:</label>
+            <input type="text" class="return-location" name="return_location" placeholder="Όνομα, ΤΚ, Πόλη ..."  >
+
+          </fieldset>
+
+          <fieldset class="form-grid-date">
+            <legend class="form-double-colspan">ΗΜΕΡΟΜΗΝΙΑ </legend>
+
+            <label for="give-date">Ημερομηνία Παραλαβής</label>
+            <input type="date" id="give-date" name="pickup_date"> <input type="time" name="pickup_time" min="09:00 am" max="17:30" id="give-time"  required>
+
+            <label for="return-date">Ημερομηνία Παράδοσης</label>
+            <input type="date" id="return-date" name="return_date"> <input type="time" id="return-time"  name="return_time" required>
+
+          </fieldset>
+
+          <div class="data">
+            <label for="over25old">Οδηγός ηλικίας άνω των 25 ετών</label>
+            <input type="checkbox" id="over25old"  name="over25_checkbox" checked>
+
+            <label for="discount">Έχω κωδικό έκπτωσης </label>
+            <input type="checkbox" id="discount" name="discount_checkbox" onclick="toggle('discount')">
+
+            <label for="discount-code" id="discount-label" class="discount">Εκπτωτικός Κωδικός </label>
+            <input type="text" id="discount-code" class="discount" name="discount_code" placeholder="χωρίς κενά και παύλες ">
+          </div>
+          <div class="submit-button"><input type="submit" value="ΒΡΕΙΤΕ ΑΥΤΟΚΙΝΗΤΟ"></div> 
+        </form>
+
+      </div>
+
+    </div>
+
+    <div class="options">
+      <ul>
+        <li><a href="#">Διαχείριση Κράτησης ></a></li>
+        <li><a href="#">Δωρεάν Ακύρωση ></a></li>
+        <li><a href="#">Πρόγραμμα Αναμοιβής ></a></li>
+      </ul>
+    </div>
+
+    <div class="grid-four">
+
+      <span class="item">
+        <img src="/images/icon-card-refund.png">
+        <h3>Ευελιξία για κάθε σας ταξίδι</h3>
+        <p>Δωρεάν Ακύρωση και εύκολη διαχείριση κράτησης</p>
+      </span>
+
+      <span class="item">
+        <img src="/images/icon-fast-track-100h.png">
+        <h3>Σε όλη την Ελλάδα και τον κόσμο</h3>
+        <p>5.500 σταθμοί ενοικίασης σε 170 χώρες</p>
+      </span>
+
+      <span class="item">
+        <img src="/images/icon-heart.png">
+        <h3>Πρόγραμμα Επιβράβευσης</h3>
+        <p>Δωρεάν Ενοικιάσεις και Αναβαθμίσεις. Αποκλειστικά Προνόμια </p>
+      </span>
+
+
+      <span class="item">
+        <img src="/images/icon-locations-100h.png">
+        <h3>Η πιο γρήγορη εξυπηρέτηση</h3>
+        <p>Εύκολη παραλαβή αυτοκινήτου </p>
+      </span>
+
+    </div>
+
+    <div class="os">Προσφορές και Υπηρεσίες</div>
+
+    <div class="services">
+      <ul>
+        <li>
+
+          <a href="#">
+            <img src="/images/dis20.jpg">
+            <h2>Ανακαλύψτε νέους προορισμούς με 20% έκπτωσης</h2>
+            <p>Αναβαθμίστε το επόμενο ταξίδι σας με το ιδανικό αυτοκίνητο από την Avis και απολαύστε 20% έκπτωση για
+              κάθε κράτηση που θα πραγματοποιηθεί έως τις 31 Μαρτίου 2023.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/images/QuickPass.jpg">
+            <h2>Ξεκινήστε το ταξίδι σας πιο γρήγορα με το QUICK PASS</h2>
+            <p>Τώρα, με το Quick Pass, μειώνετε τον χρόνο παραμονής σας στον σταθμό ενοικίασης και παραλαμβάνετε το αυτοκίνητό σας ακόμα πιο γρήγορα.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/images/switch.jpg">
+            <h2>Κάνε Switch στο... αληθινά ευέλικτο αυτοκίνητο!</h2>
+            <p>Απόκτησε το επόμενο αυτοκίνητό σου online, σε 5 λεπτά, χωρίς προκαταβολή, με all-inclusive μίσθωμα και
+              ακύρωση όποτε θες, χωρίς κανένα κόστος.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/images/business.jpg" height="402px">
+            <h2>Αvis Business Solutions</h2>
+            <p>Για οποιαδήποτε ανάγκη επαγγελματικής μετακίνησής, από ολιγοήμερη μέχρι μηνιαία ή ετήσια ενοικίαση, η
+              ιδανική λύση βρίσκεται στην Avis.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/images/discount10.jpg">
+            <h2>H Άνοιξη ξεκινά με 10% έκπτωση από την Avis</h2>
+            <p>Η Άνοιξη σας καλεί σε νέες αποδράσεις; Η Avis σας προσφέρει το ιδανικό αυτοκίνητο για 
+              κάθε σας εξόρμηση με 10% έκπτωση για κρατήσεις που θα πραγματοποιηθούν έως 30 Απριλίου 2023.</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="/images/Preferred.jpg">
+            <h2>Δωρεάν Ενοικιάσεις με Avis Preferred</h2>
+            <p>Εγγραφείτε δωρεάν στο Avis Preferred και ταξιδέψτε με άνεση, άμεση εξυπηρέτηση και πολλά άλλα προνόμια.
+              Κάθε επίπεδο επιβράβευσης ανταμείβει την προτίμησή σας.</p>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+
+
+    <div class="footer">
+
+      <span>
+        <h3>Χρήσιμες Πληροφορίες</h3>
+        <br>
+        <div class="info">
+          <a href="#">Γενικοί Όροι Ενοικίασης</a>
+          <a href="#">Πολιτική Απορρήτου</a>
+          <a href="#">FAQs</a>
+          <a href="#">Ερωτηματολόγιο</a>
+        </div>
+      </span>
+
+      <span>
+        <h3>Δίκτυο Ενοικίασης</h3>
+        <div>
+          <br>
+          <ul>
+            <li><a href="#">Αθήνα</a></li>
+            <li><a href="#">Αλεξανδρούπολη</a></li>
+            <li><a href="#">Βόλος</a></li>
+            <li><a href="#">Ζάκυνθος</a></li>
+            <li><a href="#">Θεσσαλονίκη</a></li>
+            <li><a href="#">Ιωάννινα</a></li>
+          </ul>
+        </div>
+      </span>
+      <span>
+        <h3>Οι Υπηρεσίες μας</h3>
+        <div>
+          <br>
+          <ul>
+            <li><a href="#">Leasing</a></li>
+            <li><a href="#">Ενοικίαση</a></li>
+            <li><a href="#">Πολυτελή Αυτοκίνητα</a></li>
+            <li><a href="#">Ενοικίαση με Οδηγό</a></li>
+            <li><a href="#">Ενοικίαση eScooter</a></li>
+            <li><a href="#">Πωλήσεις Μεταχειρισμένων</a></li>
+          </ul>
+        </div>
+      </span>
+
+      <span>
+        <h3>Επικοινωνία</h3>
+        <br>
+        <div>
+          <a href="https://www.facebook.com"><i class="fa fa-facebook">&nbsp;Facebook&nbsp;</i></a>
+          <a href="https://twitter.com">&emsp;<i class="fa fa-twitter">&nbsp;Twitter&nbsp;</i></a>
+        </div>
+          <br>
+          <a href="https://www.instagram.com"><i class="fa fa-instagram">&nbsp;Instagram&nbsp;</i></a>
+          <a href="https://www.linkedin.com">&emsp;<i class="fa fa-linkedin">&nbsp;LinkedIn&nbsp;</i></a>
+        <div><br>
+        <a href="https://www.youtube.com"><i class="fa fa-youtube">&nbsp;YouTube&nbsp;</i></a>
+        <a href="https://www.github.com/spiropouloz">&emsp;&nbsp;&nbsp;<i class="fa fa-github">&nbsp;GitHub&nbsp;</i></a>
+
+        </div>
+      </span>
+      <span>
+    </div>
+  </main>
+
+</body>
+
+</html>

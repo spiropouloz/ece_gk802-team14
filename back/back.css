@@ -1,0 +1,198 @@
+* {
+    zoom: 105%
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner {
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 70px;
+    margin: 0;
+    font-size: 2.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-office {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.back-options {
+    width: 330px;
+    background-color: #d4002a;
+    padding-left: 0;
+    height: 200vh;
+    zoom: 95%;
+}
+
+.here {
+    background-color: black;
+}
+
+.here a {
+    color: white;
+}
+
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+.back-options ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+
+.back-options ul li {
+    font-size: 1.7em;
+    padding: 15px;
+}
+
+.back-options ul li a {
+    margin-left: 25px;
+}
+
+.back-options ul li:last-child {
+    position: fixed;
+    bottom: 0;
+}
+
+.book-table {
+    margin: 50px;
+    zoom: 100%;
+}
+
+
+table {
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+/* #tableAdmin {
+    margin: 50px;
+}
+
+#tableBooking {
+    margin: 20px;
+} */
+
+/* th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+} */
+
+th {
+    background-color: gray;
+    color: white;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#newbutton,
+.submit {
+    width: max-content;
+    font-size: 1.2em;
+    color: white;
+    background: #d4002a;
+    border-radius: 18px;
+    padding: 0.5rem 2rem;
+    align-self: center;
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    border-radius: 20px;
+    box-shadow: 4px 3px 7px 2px #00000063;
+    padding: 1.3rem;
+    box-sizing: border-box;
+    visibility: hidden;
+    position: absolute;
+    left: 40%;
+    top: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+
+.center h1 {
+    font-size: 1.5em;
+    border-left: 5px solid #d4002a;
+    padding: 10px;
+    color: #000;
+    /* letter-spacing: 5px; */
+    /* margin-bottom: 60px; */
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.center .inputbox {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.center .inputbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid #000;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+.center .inputbox:last-child {
+    margin-bottom: 0;
+}
+
+.center .inputbox span {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    font-size: 1em;
+    transition: 0.6s;
+    font-family: sans-serif;
+}
+
+.center .inputbox input:focus~span,
+.center .inputbox input:valid~span {
+    transform: translateX(-13px) translateY(-35px);
+    font-size: 1em;
+}
+
+.center .inputbox [type="button"] {
+    width: 50%;
+    background: dodgerblue;
+    color: #fff;
+    border: #fff;
+}
+
+.center .inputbox:hover [type="button"] {
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
+}

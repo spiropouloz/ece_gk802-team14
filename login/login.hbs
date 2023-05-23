@@ -1,0 +1,15 @@
+
+<script src="login.js" async></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<form class="container" action="/loginsubmit" method="GET">
+    <a href="http://127.0.0.1:3000"> <img src="/images/avis-white-logo.png"></a>
+    <h1>Back Office</h1>
+    <p style="color: white;">Σύνδεση μόνο για διαχειριστές&nbsp;</p>
+    <input type="text" name="username" id="username" placeholder="Όνομα Χρήστη" required>
+    <input type="password" name="password" id="password" placeholder="Κωδικός" required>
+    <h6><a href='#' style="color: white; text-decoration: none;">Ξέχασες τον κωδικό σου;</a></h6>
+    <input type="submit" value="Σύνδεση">
+    <a href="http://127.0.0.1:3000" style="color: white; text-decoration: none;">Δεν είμαι διαχειριστής</a>
+    <h3 style="color:red; display:{{display}}">Δεν υπάρχει αυτός ο διαχειριστής</h3>
+</form>

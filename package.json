@@ -1,0 +1,21 @@
+{
+  "name": "ece_gk802-team14-avis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Marios Spyropoulos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.1.1",
+    "open": "^9.1.0",
+    "path": "^0.12.7"
+  }
+}
