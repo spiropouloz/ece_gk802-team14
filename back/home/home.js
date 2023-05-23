@@ -1,21 +1,3 @@
-
-// e.addEventListener("change", () =>{
-//     const tbl = document.getElementById("table");
-//     tbl.removeChild(tbl.getElementsByTagName("tbody")[0]);
-
-//     $.getJSON('database.json', function(data) {
-        
-//         if (e.options[e.selectedIndex].text !== "Όλες")
-//             var temp = data.bookings.filter(function(el){ return (el['status'].substring(0, 4) === e.options[e.selectedIndex].text.substring(0, 4));})
-//         else{ 
-//             var temp = data.bookings
-//         }
-//         load(data, temp);
-//     });
-
-// });
-
-
 let ongoing=0;
 let gross=0;
 let total=0;
@@ -52,5 +34,3 @@ function all(booking){
 
 
 document.addEventListener("load", load());
-
-
