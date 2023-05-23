@@ -6,7 +6,7 @@ function load(db){
             "<td>" + admin['lname']+ "</td>"+ 
             "<td>" + admin['email']+ "</td>"+ 
             "<td>" + admin['username']+ "</td>"+ 
-            `<td> <form action='/deleteAdmin' method=GET><input type='text' name='id' value=${admin['_id']} style='display:none'><input type='submit' value='Διαγραφή' style='margin-left: 15px;'></form></td>`+
+            `<td> <form action='/deleteAdmin' method=GET><input type='text' name='id' value=${admin['_id']} style='display:none'><input type='submit' value='Διαγραφή' style='margin-left: 15px; cursor: pointer;'></form></td>`+
             "</tr>"
         $(tblRow).appendTo("#table");
     }

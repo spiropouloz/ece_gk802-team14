@@ -20,7 +20,7 @@ function load(db){
             "<td>" + car['fuel']+ "</td>"+ 
             "<td>" + car['price_day']+ "</td>"+ 
             color_state(car['state'])+
-            `<td> <form action='/deleteCar' method=GET><input type='text' name='id' value=${car.id} style='display:none'><input type='submit' value='Διαγραφή' style='margin-left: 15px;'></form></td>`+
+            `<td> <form action='/deleteCar' method=GET><input type='text' name='id' value=${car.id} style='display:none'><input type='submit' value='Διαγραφή' style='margin-left: 15px; cursor: pointer;'></form></td>`+
             "</tr>"
         $(tblRow).appendTo("#table");
     }
