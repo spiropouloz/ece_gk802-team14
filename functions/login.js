@@ -1,4 +1,12 @@
 const db = require('../schemas');
+var auth = 0;
+
+function getAuth(){
+    return auth;
+}
+function changeAuth(v){
+    auth = v;
+}
 
 // Ελέγχει αν τα διαπιστευτήρια που εισήγαγε ο χρήστης αντιστοιχούν σε κάποιον διαχειριστή στην βάση.
 let loginsubmit = async function(req,res) {
@@ -9,6 +17,7 @@ let loginsubmit = async function(req,res) {
             res.render('../../login/login' , {display:"block", title: "Login Form", cssfile:'../../login/login.css' });
         }
         else{
+            auth = 1;
             res.redirect('/back/home/home.html');
         }
     })
@@ -18,4 +27,4 @@ let loginsubmit = async function(req,res) {
 }
 //
 
-module.exports = {loginsubmit};
+module.exports = {loginsubmit, getAuth, changeAuth};
