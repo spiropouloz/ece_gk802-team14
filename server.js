@@ -29,7 +29,7 @@ app.engine('hbs',exphbs.engine({extname: '.hbs', defaultLayout: 'main', layoutsD
 // Σύνδεση με MongoDB Atlas
 // const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
-MONGODB_URL = ''
+const MONGODB_URL = ''
 mongoose.connect(MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
