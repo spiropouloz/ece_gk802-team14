@@ -35,7 +35,7 @@ let selectCar = async function(req, res, next){
 
     console.log(car);
 
-    const urlParams = new URLSearchParams(req.rawHeaders[27]);
+    const urlParams = new URLSearchParams(req.headers.referer);
 
     const newBooking = new db.bookings({
         id:  lastbooking.id+1,
